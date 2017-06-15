@@ -1,0 +1,19 @@
+version: 0.1
+
+phases:
+
+  install:
+    commands:
+      - echo Get dependencies...
+      - go get -t -d -v ./...
+
+  build:
+    commands:
+
+      # Build our application
+      - echo Build application...
+      - go build -o app
+
+artifacts:
+  files:
+    - app

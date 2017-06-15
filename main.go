@@ -4,12 +4,12 @@ import (
 	"github.com/kataras/iris"
 	"github.com/kataras/iris/context"
 	"net/http"
-	"time"
 	"os"
+	"time"
 )
 
 const (
-	Port = "8080"
+	Port = "3000"
 )
 
 func main() {
@@ -47,14 +47,14 @@ func logThisMiddleware(ctx context.Context) {
 	ctx.Next()
 }
 
-func getAPIInfo(ctx context.Context){
+func getAPIInfo(ctx context.Context) {
 	ctx.JSON(map[string]interface{}{
 		"version": "0.0.1",
 	})
 }
 
 type TodoModel struct {
-	Id int `json:"id"`
+	Id    int    `json:"id"`
 	Title string `json:"title"`
 }
 
