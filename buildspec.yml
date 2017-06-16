@@ -12,7 +12,7 @@ phases:
 
       # Build our application
       - echo Build application...
-      - go build -v -o app
+      - go build -v -o app main.go
 
 artifacts:
   files:
